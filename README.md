@@ -1,5 +1,6 @@
 # MLT_CAC classification
-Standalone codebase for CAC classification from DICOM CXRs through multi-task learning
+
+Standalone codebase for *AI-CXR (Chest X-Ray) Opportunistic Screening Model for Coronary Artery Calcium Deposition: A Multi-Objective Model With Multi-Modal Data Fusion*. The repo contains training and inference code using DICOM CXRs.
 
 # Requirements
 All libraries required for the code is listed in the requirements.txt

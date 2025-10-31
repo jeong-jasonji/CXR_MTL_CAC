@@ -6,7 +6,7 @@ All libraries required for the code is listed in the requirements.txt
 
 Check that these files are in the appropriate structure. The model weights can be downloaded here: [link](https://drive.google.com/drive/folders/1dxvBqHSiqLH14lSNH4akby8wthmVud0A?usp=sharing)
 ```
-├── MACE_classification
+├── CXR_MTL_CAC
 │   ├── base
 │   ├── options
 │   ├── bone_supp

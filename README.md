@@ -1,6 +1,12 @@
 # MLT_CAC classification
-
 Standalone codebase for *AI-CXR (Chest X-Ray) Opportunistic Screening Model for Coronary Artery Calcium Deposition: A Multi-Objective Model With Multi-Modal Data Fusion*. The repo contains training and inference code using DICOM CXRs.
+
+
+```
+Citation:
+
+Jeong, Jiwoong, Chieh-Ju Chao, Reza Arsanjani, Chadi Ayoub, Steven J. Lester, Milagros Pereyra, Ebram F. Said et al. "AI-CXR (Chest X-Ray) Opportunistic Screening Model for Coronary Artery Calcium Deposition: A Multi-Objective Model With Multi-Modal Data Fusion." Mayo Clinic Proceedings: Digital Health (2025): 100300.
+```
 
 # Requirements
 All libraries required for the code is listed in the requirements.txt

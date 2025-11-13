@@ -179,7 +179,7 @@ def train_epoch(opt, model, dataloaders, criterion, optimizer):
     return model, epoch_metrics
 
 
-def model_predict(opt, model, dataloader):
+def model_predict(opt, model, dataloader, eval_CAC=True):
     """
     Uses the given model to predict on the dataloader data and output the true and predicted labels
     Returns a dictionary with the true labels, predicted labels, ids, and scores for each class prediction
@@ -188,18 +188,14 @@ def model_predict(opt, model, dataloader):
     model.cuda()
     model.eval()
 
-    # set up output dictionary
-    out_dict = {}
-    for i in 
-
     out_dict = {'true': [], 'pred': [], 'ids': []}
     for i in range(opt.num_classes):
         out_dict['score_{}'.format(i)] = []
 
-    out_dict = {'dcm': [], 't1_pred': [], 't1_score_0': [], 't1_score_1': []}
+    # out_dict = {'dcm': [], 't1_pred': [], 't1_score_0': [], 't1_score_1': [],'true': [], 'pred': [], 'ids': []}
     if eval_CAC:
-        out_dict = {'dcm': [], 't1_pred': [], 't1_score_0': [], 't1_score_1': [], 't2_pred': [], 't2_score_0': [], 't2_score_1': [], 't2_score_2': []}
-    
+        out_dict = {'dcm': [], 't1_pred': [], 't1_score_0': [], 't1_score_1': [], 't2_pred': [], 't2_score_0': [], 't2_score_1': [], 't2_score_2': [],
+                    'true': [], 'pred': [], 'ids': []}
 
     for inputs, labels, pt_id, img_meta in tqdm(dataloader, desc='Predicting'):
         inputs = inputs.cuda()

@@ -68,8 +68,8 @@ def eval_MACE_joint(eval_list, test_csv=None):
     task1_cls = 2
     
     # load normalized histograms
-    norm_hist = np.array(pickle.load(open('./mace_clf/normalized_hist_array_manual.pkl', 'rb'))).reshape(1, 65410)
-    bone_hist = np.array(pickle.load(open('./mace_clf/normalized_bonesupp_array_manual.pkl', 'rb'))).reshape(1, 65413)
+    norm_hist = np.array(pickle.load(open('./cac_mace_clf/normalized_hist_array_manual.pkl', 'rb'))).reshape(1, 65410)
+    bone_hist = np.array(pickle.load(open('./cac_mace_clf/normalized_bonesupp_array_manual.pkl', 'rb'))).reshape(1, 65413)
     
     # initialize model
     model = torch.load('./joint_clf/joint_clf.pth', map_location=torch.device('cpu'))

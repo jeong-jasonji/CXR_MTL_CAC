@@ -2,7 +2,7 @@ import os
 import pandas as pd
 from config import parse_args
 
-from mace_clf.CAC_MACE_clf import *
+from cac_mace_clf.CAC_MACE_clf import *
 from joint_clf.joint_clf import *
 from view_clf.inference import *
 from clahe_clf.inference import *
@@ -53,10 +53,15 @@ def main(args):
     
     # run MACE classification
     print('running MACE classification') if args.verbose == 1 else None
-    eval_df = eval_MACE_joint(args) if args.joint == 1 else eval_MACE(args)
+    if args.joint == 1:
+        df = pd.read_csv(args.df_path)
+        eval_list = df['cropped_path'].tolist()
+        eval_df = eval_MACE_joint(eval_list)
+    else:
+        eval_df = eval_MACE(args)
+
     eval_df.to_csv('cac_inference.csv')
-    
-    
+
 if __name__ == "__main__":
     # parse arguments
     args = parse_args()

@@ -1,0 +1,9 @@
+# Python cache directories
+__pycache__/
+*/__pycache__/
+**/__pycache__/
+
+# models
+clahe_clf/best_model_config.pth.tar
+cac_mace_clf/MACE_clf.pth
+lung_crop/cxr_reg_weights.best.hdf5

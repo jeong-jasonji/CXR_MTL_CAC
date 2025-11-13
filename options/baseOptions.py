@@ -24,7 +24,7 @@ class BaseOptions():
         self.opt.checkpoints_dir = self.args.checkpoints_dir
         self.opt.max_epochs = self.args.epochs
         self.opt.dataframes_dir = self.args.df_path
-        self.opt.hist_norm = "./mace_clf/normalized_hist_array_manual.pkl"
+        self.opt.hist_norm = "./cac_mace_clf/normalized_hist_array_manual.pkl"
         self.opt.gpu_ids = self.args.device[-1]
 
         # set gpu ids and set cuda devices
